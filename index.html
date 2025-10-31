@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .status {
+            color: #22c55e;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .version {
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/logo.svg" alt="Capgemini Logo" class="logo">
+        <h1> CI/CD Test Page </h1>
+        <p class="status">✓ Deployment Successful!</p>
+        <p>If you can see this page, your CI/CD pipeline is working correctly.</p>
+        <p><a href="https://www.capgemini.com" target="_blank">Visit Capgemini Website</a></p>
+        <div class="version">
+            Version: 1.0.0<br>
+            Last Updated: <span id="timestamp"></span>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
